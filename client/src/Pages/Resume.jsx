@@ -48,6 +48,13 @@ const Resume = () => {
 
   const education = [
     {
+      degree: "Master Of Computer Application (MCA)",
+      school: "Thakur College of Engineering and Technology",
+      period: "2025 - 2027",
+      location: "Kandivali, Mumbai",
+    },
+
+    {
       degree: "Bachelor Of Computer Application (BCA)",
       school: "Smt. P. D. Hinduja Trust's K. P. B. Hinduja College of Commerce",
       period: "2022 - 2025",
@@ -73,8 +80,8 @@ const Resume = () => {
 
   const skills = {
     "Frontend": ["React", "TypeScript", "Next.js", "Vue.js", "HTML5", "CSS3", "Tailwind CSS", "SASS"],
-    "Backend": ["Node.js", "Python", "Express.js", "FastAPI", "PostgreSQL", "MongoDB", "Redis"],
-    "DevOps & Cloud": ["AWS", "CI/CD", "GitHub Actions", "Vercel", "Netlify"],
+    "Backend": ["Node.js", "Express.js", "FastAPI", "PostgreSQL", "MongoDB"],
+    "DevOps & Cloud": ["Render", "CI/CD", "GitHub Actions", "Vercel", "Netlify"],
     "Tools & Other": ["Git", "VS Code", "Figma", "Postman", "Webpack", "Vite", "Github", "Intellij", "Replit"]
   };
 
@@ -218,7 +225,7 @@ const Resume = () => {
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
             Experienced Full Stack Developer with a passion for creating innovative digital solutions and mentoring the next generation of developers.
           </p>
-          <Button className="bg-primary hover:bg-primary/90" size="lg" onClick={() => window.open("/Antima_Jayprakash_Mishra_Resume.pdf", "_blank")}>
+          <Button className="bg-primary hover:bg-primary/90" size="lg" onClick={() => window.open("/Antima-Jayprakash-Mishra-Resume.pdf", "_blank")}>
             <Download className="mr-2" size={20} />
             Download PDF
           </Button>
@@ -277,7 +284,7 @@ const Resume = () => {
                 </CardHeader>
                 <CardContent>
                   <p className="text-2xl font-bold text-primary">1+ Years</p>
-                  <p className="text-sm text-muted-foreground">Full Stack Development</p>
+                  <p className="text-sm text-muted-foreground">Frontend Development</p>
                 </CardContent>
               </Card>
 
@@ -343,16 +350,25 @@ const Resume = () => {
                     Core Technologies
                   </CardTitle>
                 </CardHeader>
-                <CardContent>
-                  <div className="space-y-3">
-                    {["React", "TypeScript", "Node.js", "Python", "AWS", "Docker"].map((skill) => (
-                      <div key={skill} className="flex justify-between items-center">
-                        <span className="text-sm text-foreground">{skill}</span>
-                        <Badge variant="outline" className="text-xs">Expert</Badge>
-                      </div>
-                    ))}
-                  </div>
-                </CardContent>
+               <CardContent>
+                <div className="space-y-3">
+                  {[
+                    { name: "HTML", level: "Advanced" },
+                    { name: "CSS", level: "Advanced" },
+                    { name: "JavaScript", level: "Intermediate" },
+                    { name: "React", level: "Intermediate" },
+                    { name: "Tailwind CSS", level: "Intermediate" },
+                    { name: "Node.js", level: "Beginner" },
+                  ].map((skill) => (
+                    <div key={skill.name} className="flex justify-between items-center">
+                      <span className="text-sm text-foreground">{skill.name}</span>
+                      <Badge variant="outline" className="text-xs">
+                        {skill.level}
+                      </Badge>
+                    </div>
+                  ))}
+                </div>
+              </CardContent>
               </Card>
             </div>
           </TabsContent>
