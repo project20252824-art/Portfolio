@@ -79,7 +79,7 @@ const Resume = () => {
 
   const skills = {
     "Frontend": ["React", "TypeScript", "Next.js", "HTML5", "CSS3", "Tailwind CSS", "SASS"],
-    "Backend": ["Node.js", "Express.js", "FastAPI", "PostgreSQL", "MongoDB", "Redis"],
+    "Backend": ["Node.js", "Express.js", "FastAPI", "PostgreSQL", "MongoDB"],
     "DevOps & Cloud": [ "CI/CD", "GitHub Actions", "Vercel", "Netlify"],
     "Tools & Other": ["Git", "VS Code", "Figma", "Postman", "Webpack", "Vite", "Github", "Intellij", "Replit"]
   };
